@@ -1,14 +1,15 @@
+
 resource "aws_dynamodb_table" "my_table" {
-    name = "${var.env}-tf-app-table"
+    name = "remoteState-tf-app-table"
     billing_mode = "PAY_PER_REQUEST"
-    hash_key = "userID"                       #LockID if we set remote backend
+    hash_key = "LockID"                       #LockID if we set remote backend
     attribute {
-      name = "userID"
+      name = "LockID"
       type = "S"
     }
     tags = {
-      Name = "${var.env}-tf-app-table"
-      Environment = var.env
+      Name = "remoteState-tf-app-table"
+      //Environment = var.env
     }
   
 }
