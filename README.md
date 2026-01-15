@@ -19,10 +19,37 @@ This tells Terraform:
 
 ### 3️⃣ Write Infrastructure Code  
 Inside your Terraform project:
-- providers.tf
-- variables.tf
 - main.tf
+- dynamo.tf
+```bash
+resource "aws_dynamodb_table" "my_table" {
+    name = "remoteState-tf-app-table"
+    billing_mode = "PAY_PER_REQUEST"
+    hash_key = "LockID"                       #LockID if we set remote backend
+    attribute {
+      name = "LockID"
+      type = "S"
+    }
+    tags = {
+      Name = "remoteState-tf-app-table"
+      //Environment = var.env
+    }
+  
+}
+
+```
 - outputs.tf
+- terraform.tf
+```bash
+  #remote state backend
+  backend "s3"{
+    bucket= "remote-tf-state-bucket-sahu"
+    key= "terraform.tfstate"    # tfstate file stored in bucket
+    region="us-east-1"
+    dynamodb_table = "remoteState-tf-app-table"
+
+}
+```
 
 At this stage:
 - State is still local
