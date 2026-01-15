@@ -9,7 +9,7 @@ Before configuring the backend, create:
 ### 2️⃣ Write Backend Configuration Code
 
 Create ***terraform.tf***:  
-<img width="548" height="346" alt="image" src="https://github.com/user-attachments/assets/974bdcfa-a046-496d-8f85-ec98b9d0b826" />
+<img width="822" height="519" alt="image" src="https://github.com/user-attachments/assets/6ed6f728-2f66-46fd-9692-f6596c40f2a1" />
 
 
 This tells Terraform:  
@@ -33,7 +33,7 @@ At this stage:
 ```bash
 terraform init
 ```
-<img width="701" height="505" alt="image" src="https://github.com/user-attachments/assets/c05dbbd8-8fde-4149-8405-11029a46b6e2" />
+<img width="1051" height="757" alt="image" src="https://github.com/user-attachments/assets/1b1d07d3-647d-429d-98e1-bc072a72a057" />
 
 
 Terraform does the following:
@@ -48,17 +48,17 @@ After confirmation:
 -  ✔️Terraform starts using remote state
 -  ✔️Local state is ignored
   
-<img width="1279" height="295" alt="image" src="https://github.com/user-attachments/assets/6a31a980-b006-42d8-a643-9319995ae846" />
-<img width="1080" height="285" alt="image" src="https://github.com/user-attachments/assets/0c5f0744-fdd6-4e33-b0ee-e06ad75d118a" />
+<img width="1919" height="443" alt="image" src="https://github.com/user-attachments/assets/911613c3-ebce-424b-a210-b406bf392e1a" />
+<img width="1620" height="428" alt="image" src="https://github.com/user-attachments/assets/fbb234cd-a0b3-47d0-b3e7-1fbd9550ddc4" />
 
 
-<img width="1275" height="225" alt="image" src="https://github.com/user-attachments/assets/1448fafe-ac5a-4887-a273-9c8fc4c4139b" />  
+<img width="1918" height="771" alt="image" src="https://github.com/user-attachments/assets/e0b2b135-cf96-4581-88b9-12e73f03e64c" />
 
 
 📌 This is why:  
 
 Even after deleting '***.tfstate***', Terraform still works  
-<img width="672" height="260" alt="image" src="https://github.com/user-attachments/assets/208098e4-9a52-4ee6-898b-9508a2a9bdfc" />
+<img width="673" height="195" alt="image" src="https://github.com/user-attachments/assets/1704fb07-169d-4b5e-abf9-17e9b17099b2" />
 
  
 ### 6️⃣ Backend Initialization Completed  
@@ -70,7 +70,7 @@ Even after deleting '***.tfstate***', Terraform still works
 terraform state list
 ```
 
-<img width="668" height="126" alt="image" src="https://github.com/user-attachments/assets/bcd0b083-d9da-47a3-a667-c5416c5aaffc" />
+<img width="673" height="195" alt="image" src="https://github.com/user-attachments/assets/1339dd8a-301c-4957-b639-c28ed30cf596" />
 
 
 Terraform:
@@ -85,7 +85,7 @@ Terraform:
 terraform apply
 ```
 
-<img width="668" height="126" alt="image" src="https://github.com/user-attachments/assets/d50b004b-c600-4645-b44b-12c44296726b" />
+<img width="1002" height="189" alt="image" src="https://github.com/user-attachments/assets/fc1f441d-deb8-4d1e-b008-d6b0d044e794" />
 
 
 Terraform:
@@ -95,7 +95,7 @@ Terraform:
   If you run Terraform from another terminal:
   - It fails with state lock error  
 
-<img width="426" height="357" alt="image" src="https://github.com/user-attachments/assets/fe88bdbf-f91d-478a-aeba-79c1d1fc821c" />
+<img width="639" height="535" alt="image" src="https://github.com/user-attachments/assets/6b8b845d-3563-4b60-80e5-087f16a79f82" />
 
 
 📌 This proves locking is working
